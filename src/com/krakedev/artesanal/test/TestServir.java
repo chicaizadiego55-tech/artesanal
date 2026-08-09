@@ -6,7 +6,7 @@ public class TestServir {
 
 	public static void main(String[] args) {
 
-		Maquina rubia = new Maquina("Pilsener", "Cerveza fria", 0.02, 8000, 0);
+		Maquina rubia = new Maquina("M001", "Pilsener", "Cerveza fria", 0.02, 8000, 0);
 
 		System.out.println("=== ESTADO INICIAL ===");
 		rubia.imprimir();

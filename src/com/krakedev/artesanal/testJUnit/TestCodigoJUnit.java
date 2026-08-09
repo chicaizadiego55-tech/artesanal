@@ -6,16 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import com.krakedev.artesanal.Maquina;
 
-public class TestLlenarJUnit {
-	
+public class TestCodigoJUnit {
+
 	@Test
-	public void testLlenarMaquina() {
+	public void testCodigoMaquina() {
 		
 		Maquina rubia = new Maquina("M001", "Pilsener", "cerveza", 0.02, 8000, 0);
 		
-		rubia.llenarMaquina();
-		
-		assertEquals(7800, rubia.getCantidadAcutal(), 0.0001);
+		assertEquals("M001", rubia.getCodigo());
 		
 	}
 	

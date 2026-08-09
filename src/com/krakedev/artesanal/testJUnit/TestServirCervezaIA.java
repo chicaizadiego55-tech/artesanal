@@ -15,6 +15,7 @@ public class TestServirCervezaIA {
 	public void testServirCervezaCuandoHayCantidadSuficiente() {
 
 		Maquina maquina = new Maquina(
+				"M001",
 				"Rubia",
 				"Cerveza artesanal rubia",
 				0.05,
@@ -30,12 +31,9 @@ public class TestServirCervezaIA {
 
 	@Test
 	public void testServirCervezaCuandoCantidadEsExactamenteIgualALaDisponible() {
-		// Valida que si la cantidad solicitada es igual a la cantidad disponible:
-		// 1. La maquina sirve correctamente.
-		// 2. La cantidad actual queda en cero.
-		// 3. Retorna el valor correcto a pagar.
 
 		Maquina maquina = new Maquina(
+				"M002",
 				"Negra",
 				"Cerveza artesanal negra",
 				0.08,
@@ -51,12 +49,9 @@ public class TestServirCervezaIA {
 
 	@Test
 	public void testServirCervezaCuandoNoHayCantidadSuficiente() {
-		// Valida que si la maquina no tiene suficiente cerveza:
-		// 1. No sirve nada.
-		// 2. Retorna 0.
-		// 3. No modifica la cantidad actual.
 
 		Maquina maquina = new Maquina(
+				"M003",
 				"Roja",
 				"Cerveza artesanal roja",
 				0.06,
@@ -71,13 +66,10 @@ public class TestServirCervezaIA {
 	}
 
 	@Test
-	public void testServirCervezaUsandoConstructorConTresParametros() {
-		// Valida el metodo servirCerveza usando el segundo constructor.
-		// Este constructor inicia la cantidad actual en 0.
-		// Luego se recarga cerveza usando un metodo disponible de la clase.
-		// Finalmente se valida que pueda servir correctamente.
+	public void testServirCervezaUsandoConstructorConCuatroParametros() {
 
 		Maquina maquina = new Maquina(
+				"M004",
 				"IPA",
 				"Cerveza artesanal IPA",
 				0.10
@@ -93,12 +85,10 @@ public class TestServirCervezaIA {
 	}
 
 	@Test
-	public void testServirCervezaConConstructorTresParametrosSinRecargar() {
-		// Valida que usando el constructor de tres parametros,
-		// la maquina inicia sin cerveza disponible.
-		// Si se intenta servir, debe retornar 0 y no modificar la cantidad actual.
+	public void testServirCervezaConConstructorCuatroParametrosSinRecargar() {
 
 		Maquina maquina = new Maquina(
+				"M005",
 				"Stout",
 				"Cerveza artesanal stout",
 				0.12
@@ -112,11 +102,9 @@ public class TestServirCervezaIA {
 
 	@Test
 	public void testServirCervezaConCantidadCero() {
-		// Valida que si el cliente solicita 0 ml:
-		// 1. No se cobra nada.
-		// 2. La cantidad actual no cambia.
 
 		Maquina maquina = new Maquina(
+				"M006",
 				"Porter",
 				"Cerveza artesanal porter",
 				0.07,
